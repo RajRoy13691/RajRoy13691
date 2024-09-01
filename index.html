@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .gallery-div {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, background-color 0.3s;
+            position: relative;
+        }
+        .gallery-div:hover {
+            transform: scale(1.05);
+        }
+        .gallery-div:active {
+            background-color: #e0e0e0;
+        }
+        .gallery-div:nth-child(odd) {
+            background-color: #f8f8f8;
+        }
+        .gallery-div:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 1200px) {
+            .gallery-div {
+                width: calc(20% - 10px); /* 5 items per row on large screens */
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .gallery-div {
+                width: calc(25% - 10px); /* 4 items per row on medium screens */
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            .gallery-div {
+                width: calc(33.333% - 10px); /* 3 items per row on small screens */
+            }
+        }
+        @media (max-width: 767px) {
+            .gallery-div {
+                width: calc(50% - 10px); /* 2 items per row on extra small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <!-- Repeat this div for 50 images -->
+        <div class="gallery-div">
+            <img src="1.jpg" alt="Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-div">
+            <img src="2.jpg" alt="Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-div">
+            <img src="3.jpg" alt="Image 3" class="gallery-img">
+        </div>
+        <div class="gallery-div">
+            <img src="4.jpg" alt="Image 4" class="gallery-img">
+        </div>
+        <div class="gallery-div">
+            <img src="5.jpg" alt="Image 5" class="gallery-img">
+        </div>
+        <!-- Continue this pattern for remaining images -->
+    </div>
+</body>
+</html>
+   </div>
+</body>
+</html>
+!-- Continue this pattern for remaining images -->
+    </div>
+</body>
+</html>
+   </div>
+</body>
+</html>
